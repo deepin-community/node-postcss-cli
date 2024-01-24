@@ -1,5 +1,31 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-postcss-cli (10.1.0+~cs16.11.1-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * New upstream version 10.1.0+~cs16.11.1
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Yadd <yadd@debian.org>  Sat, 03 Dec 2022 18:27:59 +0100
+
+node-postcss-cli (10.0.0+~cs15.12.0-2) unstable; urgency=medium
+
+  * Allow __proto__ calls to workaround ava issue
+
+ -- Yadd <yadd@debian.org>  Thu, 01 Dec 2022 12:06:35 +0100
+
+node-postcss-cli (10.0.0+~cs15.12.0-1) unstable; urgency=medium
+
+  * New upstream version 10.0.0+~cs15.12.0
+
+ -- Yadd <yadd@debian.org>  Mon, 04 Jul 2022 10:49:01 +0200
+
+node-postcss-cli (9.1.0+~cs15.12.0-2) unstable; urgency=medium
+
+  * Source-only upload
+  * Provides postcss
+
+ -- Yadd <yadd@debian.org>  Fri, 17 Jun 2022 14:07:39 +0200
+
+node-postcss-cli (9.1.0+~cs15.12.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1012324)
+
+ -- Yadd <yadd@debian.org>  Sat, 04 Jun 2022 10:05:11 +0200

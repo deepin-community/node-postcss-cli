@@ -1,0 +1,1 @@
+ava `ls test/*.js|grep -v test/stdin.js|grep -v test/stdout.js|grep -v test/watch.js`

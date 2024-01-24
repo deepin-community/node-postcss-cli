@@ -1,0 +1,26 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.+\/v?(\d\S+)@ARCHIVE_EXT@/postcss-cli-$1\.tar\.gz/ \
+ https://github.com/postcss/postcss-cli/tags .*/v?(\d\S+)\.tar\.gz group
+
+opts=\
+component=dependency-graph,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-dependency-graph-$1/ \
+ https://github.com/jriecken/dependency-graph/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=read-cache,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-read-cache-$1/ \
+ https://github.com/TrySound/read-cache/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=postcss-import,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-postcss-import-$1/ \
+ https://github.com/postcss/postcss-import/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

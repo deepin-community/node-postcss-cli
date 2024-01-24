@@ -1,4 +1,18 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
 %:
 	dh $@
+
+override_dh_auto_build:
+	ln -s index.js postcss
+	chmod +x index.js
+	help2man -N -n 'Command-line client for nodeè-postcss' ./postcss > postcss.1
+	rm -f postcss
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x debian/node-postcss-cli/usr/share/nodejs/postcss-cli/index.js
