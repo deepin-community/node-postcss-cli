@@ -1,15 +1,56 @@
-Source: template-repository
-Section: unknown
+Source: node-postcss-cli
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Yadd <yadd@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , ava <!nocheck>
+ , help2man
+ , node-chokidar (>= 3.3.0)
+ , node-fs-extra (>= 10.0.0)
+ , node-get-stdin
+ , node-globby (>= 12.0.0)
+ , node-picocolors
+ , node-postcss
+ , node-postcss-load-config
+ , node-postcss-reporter
+ , node-postcss-value-parser <!nocheck>
+ , node-pretty-hrtime
+ , node-resolve <!nocheck>
+ , node-slash (>= 4.0.0)
+ , node-uuid <!nocheck>
+ , node-yargs
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-postcss-cli
+Vcs-Git: https://salsa.debian.org/js-team/node-postcss-cli.git
+Homepage: https://github.com/postcss/postcss-cli#readme
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-postcss-cli
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-chokidar (>= 3.3.0)
+ , node-fs-extra (>= 10.0.0)
+ , node-get-stdin
+ , node-globby (>= 12.0.0)
+ , node-picocolors
+ , node-postcss
+ , node-postcss-load-config
+ , node-postcss-reporter
+ , node-postcss-value-parser
+ , node-pretty-hrtime
+ , node-resolve
+ , node-slash (>= 4.0.0)
+ , node-yargs
+ , nodejs:any
+Provides: ${nodejs:Provides}
+ , postcss
+Description: Command-line client for node-postcss
+ node-postcss provides plugins that can lint CSS, support variables and
+ mixins, transpile, future CSS syntax, inline images, and more.
+ .
+ node-postcss-cli provides a command-line client for node-postcss.

@@ -1,0 +1,13 @@
+Description: fix shebang
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-06-04
+
+--- a/index.js
++++ b/index.js
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/node
+ 
+ import fs from 'fs-extra'
+ import path from 'path'
